@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tableau Visualization | Kaitlin Beltran</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="lab02.html">Lab 2: AI Evaluation</a>
+            <a href="lab03.html">Lab 3: Visualization Critique</a>
+            <a href="lab04.html"class="active">Lab 4: Tableau Visualization</a>
+            <!-- Add more lab links as the semester progresses -->
+        </nav>
+        <h1>Tableau Visualization</h1>
+    </header>
+
+    <main>
+        <section>
+            <h2>Visualization</h2>
+            <div class='tableauPlaceholder' id='viz1770845554874' style='position: relative'><noscript><a href='#'><img alt='Marketing Campaign Analysis ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ma&#47;MarketingCampaignAnalysis_17708449490420&#47;Sheet1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='MarketingCampaignAnalysis_17708449490420&#47;Sheet1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ma&#47;MarketingCampaignAnalysis_17708449490420&#47;Sheet1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1770845554874');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+        
+        </section>
+
+        <section>
+            <h2>Reflection & Analysis</h2>
+            
+            <h3>Data Preparation</h3>
+            <p>When trying to upload my dataset, I did not encounter any major errors or technical issues, and I actually found the process very straightforward. I downloaded the dataset as a ZIP file from Kaggle and then extracted it to access the CSV file inside. Tableau Public was able to read the CSV file immediately when I selected it as a text file connection. 
+</p>
+            <p>Luckily, the data was already well-structured, so I did not need to perform data cleaning before uploading. The dataset contained labeled fields, consistent formatting, and no obvious missing values. One thing I did notice is that one group, the Basic Education category, had a very small sample size. This did not directly affect uploading, but is important to note during analyses since small sample sizes can make patterns less reliable and even inconclusive.</p>
+            <h3>Design Choices</h3>
+            <p>When designing my visualization, I chose Income and Education as my primary variables because there is a common assumption that higher education levels are positively correlated with higher income levels. I wanted to explore whether this pattern would appear in the dataset and whether any education groups would deviate from that expectation.</p>
+            <p>I chose to present the data using a bar chart because bar charts are easy to read and allow for quick comparisons between categories. Since Education is a categorical variable, a bar chart made it easy to compare income totals across each education level side by side. This made it easier to identify which groups had the highest and lowest income values at a glance.</p>
+            <p>I also added response count as a color variable to provide additional context about sample size and engagement levels across groups. Including response data helped me avoid misinterpreting results by showing whether certain groups (such as the Basic Education group) had very small participation levels. This was crucial, as small sample sizes can sometimes make trends appear stronger or weaker than they actually are.</p>
+            <h3>Expected Patterns</h3>
+            <p>Going into the analysis, I expected to see a general pattern in which higher education levels were associated with higher income levels. This expectation was based on common economic and social assumptions that additional education often leads to higher-paying career opportunities. In this dataset, that general pattern did appear. Customers with higher education levels generally showed higher average income levels compared to lower education groups.</p>
+            <p>I also explored subgroup patterns by applying filters by marital status. I started with filtering to include only married customers, which showed the same general education-to-income correlation. The trend was also consistent when observing widowed customers. However, when filtering divorced customers, the graduation-level education group showed the highest average income compared to other education levels. </p>
+            <h3>Surprises/Outliers</h3>
+            <p>One result that surprised me slightly was how small the difference was between the Graduation and Master’s groups. The difference was less than $200, suggesting that having a master’s degree did not significantly increase average income compared to a bachelor’s degree in this dataset. To further understand this, I would have to break down responses by role and industry to understand the sample distribution. It did still follow the overall upward trend, though.</p>
+            <p>Another deviation from the pattern came from observing untypical marital statuses such as “YOLO” and “Absurd”. These groups did not contain customers in the Basic or 2n Cycle education levels. Their income patterns actually displayed the opposite of the expected upward trend, with average income decreasing as we move up the education levels. I will note, however, that these groups came from extremely small sample sizes.
+</p>
+            <h3>Questions for Further Investigation</h3>
+            <p>Several questions emerged while analyzing the outliers and unexpected patterns in the data. My first major question is why the income difference between the Master’s and the Graduation education groups is so small. I recommend conducting an additional investigation, such as examining the industry breakdown of the sample population, which could help reveal whether certain industries in the dataset have smaller income differences between bachelor’s and master’s level employees. Another question I pondered was the breakdown of the income values across commission-based roles, salary-based roles, or a combination of both, since compensation structure can have a significant impact on overall income.</p>
+            <p>Another area for further investigation involves the nontraditional marital status categories labeled “YOLO” and “Absurd”. I would want to understand the definition of these groups before making any conclusions based on the dataset. Outside of these categories, I would also want clarification on the difference between “Single” and “Alone,” since I do not have enough data to assume the categories represent the same population. Having a definition for each group is critical for making conclusions from the data. </p>
+            <h3>Tool Evaluation</h3>
+            <p>Tableau Public is a very efficient and user-friendly tool when it comes to creating data visualizations. The feature I liked the most was how quickly I could build visuals using drag-and-drop. I did not have to apply many functions or spend time searching through menus, and instead was able to visually understand how to navigate the platform. One of the most useful features was being able to switch between functions such as SUM and AVG without needing to rewrite code. I found Tableau much easier to learn than Excel, as everything is visually organized and accessible on the screen.</p>
+            <p>However, one challenge I encountered was the requirement for visualizations to be published publicly. While this was not a limitation for this assignment, I am not sure I would want every project I create to be publicly accessible. This limitation applies even further to those with jobs that work with sensitive data. This is different from Excel, where files can remain private unless shared.
+</p>
+        </main>
+
+    <footer>
+        <p>© 2026 Kaitlin Beltran</p>
+    </footer>
+</body>
+</html>
