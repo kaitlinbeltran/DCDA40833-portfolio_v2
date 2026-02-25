@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Lab 5: Vibe Coding documentation and reflection artifacts" />
+  <meta name="author" content="Kaitlin Beltran" />
+  <title>Lab 5 | Vibe Coding</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body>
+  <!-- Navigation: Links to all portfolio pages -->
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="lab02.html">Lab 2: AI Evaluation</a></li>
+      <li><a href="lab03.html">Lab 3: Visualization Critique</a></li>
+      <li><a href="lab04.html">Lab 4: Tableau Viz</a></li>
+      <li><a href="lab05.html">Lab 5: Vibe Coding</a></li>
+      <li><a href="hometown-map.html">Hometown Map</a></li>
+    </ul>
+  </nav>
+
+  <header>
+    <h1>Lab 5: Vibe Coding</h1>
+    <p>AI-assisted development documentation for my Skills Portfolio.</p>
+
+    <!-- I understand the logic: this button triggers JavaScript to toggle dark mode -->
+    <button id="dark-mode-toggle" aria-pressed="false" aria-label="Toggle dark mode">
+      Dark Mode: Off
+    </button>
+  </header>
+
+<main>
+  <section>
+    <h2>Description: What I Built with AI Assistance</h2>
+    <p>
+      I used AI assistance to add a dark mode toggle to my existing Skills Portfolio.
+      The feature allows users to switch between light and dark themes and saves the
+      user’s preference so it stays consistent after refreshing or returning to the site.
+      My goal was to enhance usability while maintaining the overall visual style of my
+      portfolio.
+    </p>
+  </section>
+
+  <section>
+    <h2>Process: How I Used AI (Experiments A + C)</h2>
+    <p>
+      I used AI as a collaborative coding assistant to implement and refine the dark
+      mode feature. AI helped generate the initial toggle logic (Experiment A), and
+      during integration it also helped identify and correct a selector alignment issue
+      between my button and the JavaScript (Experiment C). I reviewed each suggested
+      change, integrated it into my existing files, and tested the feature across pages
+      to ensure it worked consistently.
+    </p>
+    <ul>
+      <li>
+        Dark mode is activated by adding <code>data-theme="dark"</code> to the
+        <code>&lt;html&gt;</code> element.
+      </li>
+      <li>
+        When the button is clicked, JavaScript checks the current theme and either adds
+        or removes the <code>data-theme</code> attribute.
+      </li>
+      <li>
+        The button text updates (On/Off) and <code>aria-pressed</code> updates for
+        accessibility.
+      </li>
+      <li>
+        The chosen theme is stored in <code>localStorage</code> so it persists across
+        refreshes.
+      </li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Key Code Snippet + Understanding Spectrum Comments</h2>
+    <p>
+      Below is a key snippet of the JavaScript with my honest
+      understanding-spectrum comments.
+    </p>
+
+    <pre><code>
+// I understand the logic: this selects the dark mode toggle button so we can respond to clicks
+const darkModeToggle = document.getElementById('dark-mode-toggle');
+
+// I understand the logic: this retrieves the user's saved theme preference from localStorage
+const savedTheme = localStorage.getItem('theme');
+
+// I understand the logic: if the user previously chose dark mode, apply it on page load
+if (savedTheme === 'dark') {
+  document.documentElement.setAttribute('data-theme', 'dark');
+  darkModeToggle.textContent = 'Dark Mode: On';
+  darkModeToggle.setAttribute('aria-pressed', 'true');
+}
+    </code></pre>
+
+    <p>
+      In my full code, I added understanding-spectrum comments throughout the script
+      to document what I fully understood versus what I verified through testing.
+    </p>
+  </section>
+
+  <section>
+    <h2>AI Prompts + AI Output (before my edits)</h2>
+    <p>
+      The following files document the exact prompts I used and the AI’s original
+      output before I modified anything. This provides transparency into my
+      AI-assisted workflow.
+    </p>
+    <ul>
+      <li><a href="lab5/lab5-prompts.txt">Lab 5 Prompts (txt)</a></li>
+      <li><a href="lab5/lab5-ai-output-before.txt">AI Output Before Modifications (txt)</a></li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Debugging with AI (Experiment C)</h2>
+    <p>
+      During implementation, I used AI to verify that my dark mode toggle was
+      correctly connected to the page. The AI identified a potential selector
+      mismatch issue and helped ensure that the button id matched what JavaScript
+      was selecting with <code>getElementById</code>. Through this process, I learned
+      that even small inconsistencies in element IDs can cause interactive features
+      to fail because the selected element becomes <code>null</code> and the click
+      handler cannot attach.
+    </p>
+  </section>
+
+  <section>
+    <h2>My Vibe Coding Guidelines</h2>
+    <ul>
+      <li>I plan what I want to build before asking AI for code.</li>
+      <li>I save my prompts and the AI’s original output for transparency.</li>
+      <li>I read every line of AI-generated code and add honest understanding-spectrum comments.</li>
+      <li>I test the feature on multiple pages and refresh to confirm it persists.</li>
+      <li>I do not submit code that I cannot explain or modify myself.</li>
+    </ul>
+  </section>
+</main>
+
+    <section>
+      <h2>Screenshot / Demo</h2>
+      <p>Dark mode screenshot below:</p>
+      <img src="lab5/images/lab5-darkmode.png" alt="Screenshot of dark mode toggle working" style="max-width: 100%; height: auto;" />
+    </section>
+
+  </main>
+
+  <footer>
+    <p><a href="https://github.com/kaitlinbeltran/DCDA40833-portfolio_v2">View Repository on GitHub</a></p>
+    <p>&copy; 2026 Kaitlin Beltran | DCDA 40833 | TCU</p>
+  </footer>
+
+  <!-- Dark mode script (same logic as other pages) -->
+  <script>
+    // I understand the logic: this selects the dark mode toggle button so we can respond to clicks
+    const darkModeToggle = document.getElementById('dark-mode-toggle');
+
+    // I understand the logic: this retrieves the user's saved theme preference from localStorage
+    const savedTheme = localStorage.getItem('theme');
+
+    // I understand the logic: if the user previously chose dark mode, apply it on page load
+    if (savedTheme === 'dark') {
+      document.documentElement.setAttribute('data-theme', 'dark');
+      darkModeToggle.textContent = 'Dark Mode: On';
+      darkModeToggle.setAttribute('aria-pressed', 'true');
+    }
+
+    // I understand the logic: this runs whenever the toggle button is clicked
+    darkModeToggle.addEventListener('click', function () {
+      // I understand the logic: checks whether dark mode is currently active
+      const isDarkMode =
+        document.documentElement.getAttribute('data-theme') === 'dark';
+
+      if (isDarkMode) {
+        // I understand the logic: turn dark mode OFF
+        document.documentElement.removeAttribute('data-theme');
+        darkModeToggle.textContent = 'Dark Mode: Off';
+        darkModeToggle.setAttribute('aria-pressed', 'false');
+        localStorage.setItem('theme', 'light');
+      } else {
+        // I understand the logic: turn dark mode ON
+        document.documentElement.setAttribute('data-theme', 'dark');
+        darkModeToggle.textContent = 'Dark Mode: On';
+        darkModeToggle.setAttribute('aria-pressed', 'true');
+        localStorage.setItem('theme', 'dark');
+      }
+    });
+  </script>
+
+</body>
+</html>

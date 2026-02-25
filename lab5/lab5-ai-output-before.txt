@@ -1,0 +1,88 @@
+Experiments A + C
+Prompt 1 Response: Added the toggle button inside your header in index.html.
+
+It now includes:
+
+id="dark-mode-toggle" for JavaScript targeting
+aria-pressed="false" and aria-label for accessibility
+visible starter text: Dark Mode: Off
+
+1 file changed
+Undo
+
+index.html
+--------------------------------------------------
+Prompt 2 Response:
+I’ll wire the button to actually switch themes by adding a small script and matching dark-mode CSS rules. I’m checking your existing styles first so I can integrate cleanly without breaking your current look.
+
+Explored 2 files, 1 list
+Your CSS already has dark theme variables, so I just need to connect your button to set data-theme="dark" on the page and update the button text/state. I’ll add a small script near the end of index.html and align the CSS selector to your button id.
+
+Background terminal finished with rg --files | rg -n "(js/|\.js$)"
+
+
+Explored 1 search
+I’m making two edits now: styles.css will target your actual button id, and index.html will get a beginner-friendly script that toggles light/dark mode and remembers the choice.
+
+Background terminal finished with echo done
+
+
+Background terminal finished with perl -0pi -e 's/#theme-toggle/#dark-mode-toggle/g' css/styles.css
+
+
+Edited file
+index.html
++26
+-0
+
+    </footer>
+    <script>
+        const darkModeToggle = document.getElementById('dark-mode-toggle');
+        const savedTheme = localStorage.getItem('theme');
+
+        if (savedTheme === 'dark') {
+            document.documentElement.setAttribute('data-theme', 'dark');
+            darkModeToggle.textContent = 'Dark Mode: On';
+            darkModeToggle.setAttribute('aria-pressed', 'true');
+        }
+
+        darkModeToggle.addEventListener('click', function () {
+            const isDarkMode = document.documentElement.getAttribute('data-theme') === 'dark';
+
+            if (isDarkMode) {
+                document.documentElement.removeAttribute('data-theme');
+                darkModeToggle.textContent = 'Dark Mode: Off';
+                darkModeToggle.setAttribute('aria-pressed', 'false');
+                localStorage.setItem('theme', 'light');
+            } else {
+                document.documentElement.setAttribute('data-theme', 'dark');
+                darkModeToggle.textContent = 'Dark Mode: On';
+                darkModeToggle.setAttribute('aria-pressed', 'true');
+                localStorage.setItem('theme', 'dark');
+            }
+        });
+    </script>
+</body>
+The toggle logic is in place. I’m doing a quick verification pass to confirm selectors match and the script is in the correct location.
+
+Explored 2 files, 1 search
+Worked for 28s
+Dark mode toggle is now functional.
+
+What I changed:
+
+Added JavaScript to switch themes on click by toggling data-theme="dark" on <html>.
+Updated button label/state (Dark Mode: On/Off, aria-pressed).
+Saved the user’s choice in localStorage so it persists on refresh.
+Fixed CSS selector mismatch so styles apply to your current button id.
+Updated files:
+
+index.html
+styles.css
+If you want, I can apply the same toggle behavior to your other pages (lab02.html, lab03.html, etc.) so dark mode works site-wide.
+
+
+1 file changed
+Undo
+
+index.html

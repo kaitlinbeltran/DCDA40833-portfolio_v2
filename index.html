@@ -17,7 +17,7 @@
             <li><a href="lab02.html">Lab 2: AI Evaluation</a>
             <li><a href="lab03.html">Lab 3: Visualization Critique</a>
             <li><a href="lab04.html">Lab 4: Tableau Viz</a></li>
-            <li><a href="lab5.html">Lab 5</a></li>
+            <li><a href="lab05.html">Lab 5: Vibe Coding</a></li>
             <li><a href="hometown-map.html">Hometown Map</a></li>
             
         </ul>
@@ -28,6 +28,9 @@
     <header>
         <h1>Kaitlin Beltran</h1>
         <p>DCDA 40833 Skills Portfolio | Spring 2026</p>
+        <button id="dark-mode-toggle" type="button" aria-pressed="false" aria-label="Toggle dark mode">
+            Dark Mode: Off
+        </button>
     </header>
 
     <main>
@@ -88,7 +91,7 @@
                 </a>
 
                 <!-- Lab 5: TBD -->
-                <a href="lab5.html" class="portfolio-card">
+                <a href="lab05.html" class="portfolio-card">
                     <h3>Lab 5</h3>
                     <span class="lab-tag">Lab 5</span>
                     <p>Content based on Lab 5 assignment.</p>
@@ -124,5 +127,39 @@
         <p><a href="https://github.com/kaitlinbeltran/DCDA40833-portfolio_v2">View Repository on GitHub</a></p>
         <p>&copy; 2026 Kaitlin Beltran | DCDA 40833 | TCU</p>
     </footer>
+    <script>
+        // I understand the logic: this selects the dark mode toggle button so we can respond to clicks
+       //I understand the logic: I learned that if the button and styles have a selector mismatch, the button becomes null and the click handler will not work.
+        const darkModeToggle = document.getElementById('dark-mode-toggle');
+        // I understand the logic: this retreives the user's saved theme preference from local storage
+        const savedTheme = localStorage.getItem('theme');
+
+        // I understand the logic: if the saved theme is dark, apply it on page
+        if (savedTheme === 'dark') {
+            document.documentElement.setAttribute('data-theme', 'dark');
+            darkModeToggle.textContent = 'Dark Mode: On';
+            darkModeToggle.setAttribute('aria-pressed', 'true');
+        }
+        // I understand the logic: this runs whenever the toggle button is clicked
+        darkModeToggle.addEventListener('click', function () {
+            //I understand the logic: checks if dark mode is currently active
+            const isDarkMode = document.documentElement.getAttribute('data-theme') === 'dark';
+            // I understand the logic: turns dark mode off
+            if (isDarkMode) {
+                document.documentElement.removeAttribute('data-theme');
+                darkModeToggle.textContent = 'Dark Mode: Off';
+                darkModeToggle.setAttribute('aria-pressed', 'false');
+                localStorage.setItem('theme', 'light');
+            } else {
+            // I understand the logic: turns dark mode on
+                document.documentElement.setAttribute('data-theme', 'dark');
+                darkModeToggle.textContent = 'Dark Mode: On';
+                darkModeToggle.setAttribute('aria-pressed', 'true');
+                localStorage.setItem('theme', 'dark');
+
+         
+            }
+        });
+    </script>
 </body>
 </html>

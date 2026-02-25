@@ -1,0 +1,3 @@
+Experiments A + C
+Prompt 1: Please help me add a beginner-friendly dark mode feature. Add the HTML for a dark mode toggle button that belongs inside my <header>.
+Prompt 2: Now make the button work by changing from light and dark themes when you press it

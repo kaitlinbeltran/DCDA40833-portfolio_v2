@@ -13,7 +13,28 @@
     --text-color: #333;            /* Dark gray for text */
     --text-secondary: #64748b;     /* Lighter gray for captions */
     --bg-color: #f4f4f4;           /* Light background */
+    --surface-color: #ffffff;
+    --nav-color: #3d1461;
+    --border-color: #e2e8f0;
+    --footer-bg: #333333;
+    --inline-code-bg: #f4f4f4;
+    --table-even-bg: #f8f9fa;
     --white: #ffffff;
+}
+
+[data-theme="dark"] {
+    --primary-color: #fb7185;
+    --secondary-color: #fda4af;
+    --accent-color: #f59e0b;
+    --text-color: #e2e8f0;
+    --text-secondary: #94a3b8;
+    --bg-color: #0f172a;
+    --surface-color: #1e293b;
+    --nav-color: #111827;
+    --border-color: #334155;
+    --footer-bg: #020617;
+    --inline-code-bg: #0f172a;
+    --table-even-bg: #172033;
 }
 
 /* =========================
@@ -41,11 +62,30 @@ body {
    ========================= */
 /* Style semantic tags directly - no classes needed! */
 header {
+    position: relative;
     background-color: var(--primary-color);
     color: white;
     padding: 2rem 0;
     text-align: center;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#dark-mode-toggle {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    border-radius: 999px;
+    background-color: transparent;
+    color: white;
+    font-size: 0.9rem;
+    font-weight: 600;
+    padding: 0.45rem 0.8rem;
+    cursor: pointer;
+}
+
+#dark-mode-toggle:hover {
+    background-color: rgba(255, 255, 255, 0.14);
 }
 
 header h1 {
@@ -61,7 +101,7 @@ header p {
 }
 
 nav {
-    background-color: #3d1461;
+    background-color: var(--nav-color);
     padding: 0.75rem;
     display: flex;              /* Make nav a flex container */
     justify-content: center;    /* Center the ul inside nav */
@@ -111,7 +151,7 @@ main {
 
 /* All sections inside main get consistent styling */
 main section {
-    background-color: white;
+    background-color: var(--surface-color);
     padding: 2rem;
     margin-bottom: 2rem;       /* Space between sections */
     border-radius: 8px;        /* Rounded corners */
@@ -206,7 +246,7 @@ code {
 
 /* Inline code (inside paragraphs) */
 p code, li code {
-    background: #f4f4f4;
+    background: var(--inline-code-bg);
     color: #c7254e;
     padding: 0.2rem 0.4rem;
     border-radius: 3px;
@@ -236,13 +276,13 @@ table {
     width: 100%;
     border-collapse: collapse;
     margin: 1.5rem 0;
-    background: white;
+    background: var(--surface-color);
 }
 
 th, td {
     padding: 0.75rem 1rem;
     text-align: left;
-    border: 1px solid #e2e8f0;
+    border: 1px solid var(--border-color);
 }
 
 th {
@@ -252,7 +292,7 @@ th {
 }
 
 tr:nth-child(even) {
-    background: #f8f9fa;
+    background: var(--table-even-bg);
 }
 
 .results-table {
@@ -310,8 +350,8 @@ tr:nth-child(even) {
 /* Individual portfolio card styling */
 .portfolio-card {
     display: block;
-    background: white;
-    border: 2px solid #e2e8f0;
+    background: var(--surface-color);
+    border: 2px solid var(--border-color);
     border-radius: 12px;
     padding: 1.5rem;
     text-decoration: none;
@@ -356,7 +396,7 @@ tr:nth-child(even) {
    Footer (semantic tag)
    ========================= */
 footer {
-    background-color: #333;
+    background-color: var(--footer-bg);
     color: white;
     text-align: center;
     padding: 1.5rem;
@@ -378,6 +418,11 @@ footer a:hover {
 @media (max-width: 768px) {
     header h1 {
         font-size: 1.5rem;     /* Smaller on mobile */
+    }
+
+    #dark-mode-toggle {
+        position: static;
+        margin-bottom: 0.75rem;
     }
 
     nav {

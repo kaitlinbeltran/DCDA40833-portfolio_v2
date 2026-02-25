@@ -12,8 +12,12 @@
             <a href="index.html">Home</a>
             <a href="lab02.html" class="active">Lab 2: AI Evaluation</a>
             <!-- Add more lab links as the semester progresses -->
+    
         </nav>
         <h1>AI Tool Evaluation</h1>
+          <button id="dark-mode-toggle" type="button" aria-pressed="false" aria-label="Toggle dark mode">
+            Dark Mode: Off
+        </button>
     </header>
 
     <main>
@@ -110,5 +114,38 @@ In my opinion, we should not be scared of AI. What we should be, however, is vig
     <footer>
         <p>&copy; 2026 Kaitlin Beltran | <a href="https://github.com/kaitlinbeltran/DCDA40833-portfolio_v2">GitHub</a></p>
     </footer>
+</body>
+</html>
+<script>
+        // I understand the logic: this selects the dark mode toggle button so we can respond to clicks
+        const darkModeToggle = document.getElementById('dark-mode-toggle');
+        // I understand the logic: this retreives the user's saved theme preference from local storage
+        const savedTheme = localStorage.getItem('theme');
+
+        // I understand the logic: if the saved theme is dark, apply it on page
+        if (savedTheme === 'dark') {
+            document.documentElement.setAttribute('data-theme', 'dark');
+            darkModeToggle.textContent = 'Dark Mode: On';
+            darkModeToggle.setAttribute('aria-pressed', 'true');
+        }
+        // I understand the logic: this runs whenever the toggle button is clicked
+        darkModeToggle.addEventListener('click', function () {
+            //I understand the logic: checks if dark mode is currently active
+            const isDarkMode = document.documentElement.getAttribute('data-theme') === 'dark';
+            // I understand the logic: turns dark mode off
+            if (isDarkMode) {
+                document.documentElement.removeAttribute('data-theme');
+                darkModeToggle.textContent = 'Dark Mode: Off';
+                darkModeToggle.setAttribute('aria-pressed', 'false');
+                localStorage.setItem('theme', 'light');
+            } else {
+            // I understand the logic: turns dark mode on
+                document.documentElement.setAttribute('data-theme', 'dark');
+                darkModeToggle.textContent = 'Dark Mode: On';
+                darkModeToggle.setAttribute('aria-pressed', 'true');
+                localStorage.setItem('theme', 'dark');
+            }
+        });
+    </script>
 </body>
 </html>
