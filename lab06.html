@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Lab 6: Interactive Hometown Map with custom Mapbox basemap and reflection" />
+  <meta name="author" content="Kaitlin Beltran" />
+  <title>Lab 6 | Interactive Hometown Map</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body>
+
+<!-- Navigation -->
+<nav>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="lab02.html">Lab 2: AI Evaluation</a></li>
+    <li><a href="lab03.html">Lab 3: Visualization Critique</a></li>
+    <li><a href="lab04.html">Lab 4: Tableau Viz</a></li>
+    <li><a href="lab05.html">Lab 5: Vibe Coding</a></li>
+    <li><a href="hometown-map.html">Hometown Map</a></li>
+  </ul>
+</nav>
+
+<header>
+  <h1>Lab 6: Interactive Hometown Map</h1>
+
+  <!-- Dark Mode Toggle -->
+  <button id="dark-mode-toggle" aria-pressed="false" aria-label="Toggle dark mode">
+    Dark Mode: Off
+  </button>
+</header>
+
+<main>
+
+<section>
+  <h2>Description: What I Built</h2>
+
+  <p>
+    For this lab, I created an interactive hometown map highlighting meaningful
+    locations from Manhattan Beach and Hermosa Beach, California. The project
+    combines a custom-designed Mapbox basemap with Python-generated web mapping.
+    The final map includes categorized markers, pop-up descriptions, and images
+    representing places that are personally important to me.
+  </p>
+
+  <p>
+    The map was generated using Python libraries including Folium and Pandas,
+    which allowed me to process location data from a CSV file and create an
+    interactive map displayed within my portfolio website.
+  </p>
+</section>
+
+<section>
+  <h2>Interactive Map</h2>
+
+  <p>
+    The map below shows my hometown locations using the custom Mapbox basemap
+    I designed in Mapbox Studio.
+  </p>
+
+  <iframe
+    src="lab6_folder/hometown_map.html"
+    width="100%"
+    height="600"
+    style="border:1px solid #ccc; border-radius:8px;">
+  </iframe>
+
+</section>
+
+<section>
+  <h2>Design Inspiration</h2>
+
+  <p>
+    My basemap design was inspired by my favorite show, <em>Breaking Bad</em>.
+    I had just finished watching the series and thought it would be fun to
+    incorporate its visual style into my map design. Specifically, I used the
+    show’s introductory title sequence as my main inspiration, as those are
+    the colors typically associated with the series.
+  </p>
+
+  <p>
+    As displayed in the images below, the introduction features a dark background
+    contrasted with bright chemical-green smoky visual elements. I translated this
+    color scheme into my basemap by using a dark charcoal color for the land and
+    deep green tones for the water and roads. The bright green roads reflected the
+    chemical-green color that appears in the smoky background of the show’s introduction.
+  </p>
+
+  <p>
+    I also kept the map relatively minimal, with the goal of mirroring the clean
+    and high-contrast look of <em>Breaking Bad</em>. Overall, my goal was to capture
+    the show’s recognizable, contrasting palette into my map by using darker tones
+    and distinct greens while being simplistic.
+  </p>
+
+  <!-- Inspiration Images -->
+  <img src="images/lab6_folder/images/breakingbad-intro1.png"
+       alt="Breaking Bad intro green smoke visual reference"
+       style="max-width:48%; height:auto; margin-right:2%; border-radius:8px;" />
+
+  <img src="images/lab6_folder/images/breakingbad-intro2.png"
+       alt="Breaking Bad title sequence visual reference"
+       style="max-width:48%; height:auto; border-radius:8px;" />
+
+</section>
+
+<section>
+  <h2>Cartographic Challenges</h2>
+
+  <p>
+    One of the main challenges I faced while designing the basemap was deciding
+    how different features should appear at different zoom levels. I had to pause
+    and think about which map elements should be visible when zoomed out versus
+    when zoomed in.
+  </p>
+
+  <p>
+    I aimed to avoid having too many labels or features at smaller scales because
+    I didn’t want the map to look cluttered. I had to create a hierarchy in my head
+    of which elements were important at which zoom levels.
+  </p>
+
+  <p>
+    Since I don’t typically consider myself very design-oriented, a lot of this
+    process was new and exploratory for me. I experimented with label density,
+    road visibility, and other elements until the map felt balanced, readable,
+    and visually effective overall.
+  </p>
+
+</section>
+
+<section>
+  <h2>Technical Challenges</h2>
+
+  <p>
+    The most difficult part of the project for me was understanding how to
+    initially generate the interactive map using Python. At first, I struggled
+    to troubleshoot errors and figure out how the different files all worked
+    together.
+  </p>
+
+  <p>
+    However, I overcame this with the help of the AI chatbot to explain any
+    error messages that came along. This tool helped me identify and understand
+    issues that were easy to fix but difficult to detect.
+  </p>
+
+  <p>
+    For example, I referenced the CSV file name without including the folder
+    path, which caused errors in my script. Later, I did the same thing with
+    the HTML file. Because AI had previously identified and explained this
+    issue, I was able to recognize the mistake quickly and avoid repeating it.
+  </p>
+
+  <p>
+    I appreciated the chatbot’s ability to not only identify problems but also
+    explain how to fix them, which helped strengthen my coding abilities and
+    overall understanding of how the files and scripts interacted.
+  </p>
+
+</section>
+
+<section>
+  <h2>Project Files</h2>
+
+  <ul>
+    <li><a href="lab6_folder/hometown_map.html">Interactive Map HTML</a></li>
+    <li><a href="lab6_folder/hometown_map.py">Python Script</a></li>
+    <li><a href="lab6_folder/hometown_locations.csv">Location CSV Data</a></li>
+    <li><a href="lab6_folder/hometown_locations_geocoded.csv">Geocoded CSV Data</a></li>
+  </ul>
+
+</section>
+
+</main>
+
+<footer>
+  <p>
+    <a href="https://github.com/kaitlinbeltran/DCDA40833-portfolio_v2">
+      View Repository on GitHub
+    </a>
+  </p>
+
+  <p>
+    &copy; 2026 Kaitlin Beltran | DCDA 40833 | TCU
+  </p>
+</footer>
+
+
+<!-- Dark Mode Script -->
+<script>
+
+const darkModeToggle = document.getElementById('dark-mode-toggle');
+
+const savedTheme = localStorage.getItem('theme');
+
+if (savedTheme === 'dark') {
+  document.documentElement.setAttribute('data-theme', 'dark');
+  darkModeToggle.textContent = 'Dark Mode: On';
+  darkModeToggle.setAttribute('aria-pressed', 'true');
+}
+
+darkModeToggle.addEventListener('click', function () {
+
+  const isDarkMode =
+    document.documentElement.getAttribute('data-theme') === 'dark';
+
+  if (isDarkMode) {
+
+    document.documentElement.removeAttribute('data-theme');
+    darkModeToggle.textContent = 'Dark Mode: Off';
+    darkModeToggle.setAttribute('aria-pressed', 'false');
+    localStorage.setItem('theme', 'light');
+
+  } else {
+
+    document.documentElement.setAttribute('data-theme', 'dark');
+    darkModeToggle.textContent = 'Dark Mode: On';
+    darkModeToggle.setAttribute('aria-pressed', 'true');
+    localStorage.setItem('theme', 'dark');
+
+  }
+
+});
+
+</script>
+
+</body>
+</html>
