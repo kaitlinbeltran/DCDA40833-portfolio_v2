@@ -24,6 +24,44 @@
 
     <main>
         <section>
+<h2>Lab Requirements</h2>
+
+<p>
+This lab focused on exploratory data analysis using Tableau Public. The goal was to select a dataset from a topic I was familiar with, visualize patterns within the data, and reflect on the analytical process. The assignment required publishing a Tableau visualization and writing a reflection discussing data preparation, design choices, expected patterns, surprising findings, questions for further investigation, and an evaluation of Tableau as a visualization tool.
+</p>
+
+</section>
+<section>
+
+<h2>Dataset Description</h2>
+
+<p>
+The dataset used in this visualization comes from the 
+<a href="https://www.kaggle.com/datasets/ahsan81/superstore-marketing-campaign-dataset" target="_blank">
+Superstore Marketing Campaign Dataset
+</a> published on Kaggle. The dataset contains demographic and purchasing behavior data for 2,240 customers collected during a retail marketing campaign.
+</p>
+
+<p>
+The dataset includes information about customer demographics, income levels, household characteristics, and purchasing behavior across several product categories such as wine, fruits, and meat products. These variables allow analysts to explore how demographic characteristics relate to consumer purchasing patterns and marketing responses.
+</p>
+
+<p>
+The visualization focuses on three variables from the dataset:
+</p>
+
+<ul>
+<li><strong>Education</strong>: the customer’s level of education</li>
+<li><strong>Marital_Status</strong>: the customer's marital status</li>
+<li><strong>MntWines</strong>: the total amount spent on wine products</li>
+</ul>
+
+<p>
+These variables were selected to explore whether demographic characteristics such as education level and marital status may be associated with differences in wine purchasing behavior.
+</p>
+
+</section>
+        <section>
             <h2>Visualization</h2>
             <div class='tableauPlaceholder' id='viz1770845554874' style='position: relative'><noscript><a href='#'><img alt='Marketing Campaign Analysis ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ma&#47;MarketingCampaignAnalysis_17708449490420&#47;Sheet1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='MarketingCampaignAnalysis_17708449490420&#47;Sheet1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ma&#47;MarketingCampaignAnalysis_17708449490420&#47;Sheet1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1770845554874');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
         
@@ -33,27 +71,101 @@
             <h2>Reflection & Analysis</h2>
             
             <h3>Data Preparation</h3>
-            <p>When trying to upload my dataset, I did not encounter any major errors or technical issues, and I actually found the process very straightforward. I downloaded the dataset as a ZIP file from Kaggle and then extracted it to access the CSV file inside. Tableau Public was able to read the CSV file immediately when I selected it as a text file connection. 
-</p>
-            <p>Luckily, the data was already well-structured, so I did not need to perform data cleaning before uploading. The dataset contained labeled fields, consistent formatting, and no obvious missing values. One thing I did notice is that one group, the Basic Education category, had a very small sample size. This did not directly affect uploading, but is important to note during analyses since small sample sizes can make patterns less reliable and even inconclusive.</p>
+            <p>The dataset was downloaded from Kaggle as a CSV file and uploaded directly into Tableau Public. Because the dataset was already structured with clearly labeled columns and consistent formatting, it did not require extensive preprocessing before being imported into Tableau. However, I reviewed the variables to ensure that Tableau correctly identified categorical variables such as Education and Marital_Status as dimensions and numerical variables such as MntWines as measures. Once the dataset was loaded, Tableau automatically recognized these variable types, which made it straightforward to begin building visualizations. The main preparation step involved selecting which variables would be relevant for exploring demographic differences in purchasing behavior.</p>
             <h3>Design Choices</h3>
-            <p>When designing my visualization, I chose Income and Education as my primary variables because there is a common assumption that higher education levels are positively correlated with higher income levels. I wanted to explore whether this pattern would appear in the dataset and whether any education groups would deviate from that expectation.</p>
-            <p>I chose to present the data using a bar chart because bar charts are easy to read and allow for quick comparisons between categories. Since Education is a categorical variable, a bar chart made it easy to compare income totals across each education level side by side. This made it easier to identify which groups had the highest and lowest income values at a glance.</p>
-            <p>I also added response count as a color variable to provide additional context about sample size and engagement levels across groups. Including response data helped me avoid misinterpreting results by showing whether certain groups (such as the Basic Education group) had very small participation levels. This was crucial, as small sample sizes can sometimes make trends appear stronger or weaker than they actually are.</p>
-            <h3>Expected Patterns</h3>
-            <p>Going into the analysis, I expected to see a general pattern in which higher education levels were associated with higher income levels. This expectation was based on common economic and social assumptions that additional education often leads to higher-paying career opportunities. In this dataset, that general pattern did appear. Customers with higher education levels generally showed higher average income levels compared to lower education groups.</p>
-            <p>I also explored subgroup patterns by applying filters by marital status. I started with filtering to include only married customers, which showed the same general education-to-income correlation. The trend was also consistent when observing widowed customers. However, when filtering divorced customers, the graduation-level education group showed the highest average income compared to other education levels. </p>
-            <h3>Surprises/Outliers</h3>
-            <p>One result that surprised me slightly was how small the difference was between the Graduation and Master’s groups. The difference was less than $200, suggesting that having a master’s degree did not significantly increase average income compared to a bachelor’s degree in this dataset. To further understand this, I would have to break down responses by role and industry to understand the sample distribution. It did still follow the overall upward trend, though.</p>
-            <p>Another deviation from the pattern came from observing untypical marital statuses such as “YOLO” and “Absurd”. These groups did not contain customers in the Basic or 2n Cycle education levels. Their income patterns actually displayed the opposite of the expected upward trend, with average income decreasing as we move up the education levels. I will note, however, that these groups came from extremely small sample sizes.
+
+<p>
+In this visualization, I used education level and marital status as dimensions to group customers into demographic categories. The metric used was MntWines, which represents the amount spent on wine products by each customer. This allowed the visualization to compare wine purchasing behavior across different demographic groups.
+</p>
+
+<p>
+A bar chart was chosen because it clearly shows differences in purchasing amounts between categories. This makes it easier to identify patterns, such as whether certain education levels or marital statuses are associated with higher wine purchases.
+</p>
+           <h3>Expected Patterns</h3>
+
+<p>
+Based on the variables selected for this visualization, I expected to see some relationship between education level and wine purchasing behavior. Higher education levels are often associated with higher income levels and purchasing power, which could influence spending on nonessential products such as wine. Because of this, I anticipated that customers with advanced education levels (such as Master’s or PhD degrees) might show higher average wine purchases compared to customers with lower education levels.
+</p>
+
+<p>
+The visualization largely confirmed this expectation. As education level increases from Basic to 2n Cycle, Graduation, Master, and PhD, the average amount spent on wine also increases. For example, the PhD group shows the highest average wine purchases (over 400), while the Basic education group shows very low average spending. This pattern suggests that education level may be associated with differences in wine purchasing behavior within this dataset.
+</p>
+            <h3>Surprises / Outliers</h3>
+
+<p>
+While the visualization generally confirmed my expectation that higher education levels might be associated with higher wine purchases, the magnitude of the differences between education groups was much larger than I initially anticipated. One particularly surprising pattern was the extremely low average wine purchases among customers with a “Basic” education level. This group showed an average wine purchase value of only about 7.2, which is dramatically lower than every other education category in the dataset.
+</p>
+
+<p>
+Another unexpected pattern was how consistently wine spending increased across each successive education level. Rather than seeing small differences between groups, the visualization showed a clear step-by-step increase from 2n Cycle to Graduation, Master, and finally PhD. Customers with a PhD had the highest average wine purchases at over 400, which was substantially higher than the other education groups.
+</p>
+
+<p>
+This pattern suggests that the relationship between education level and wine purchasing behavior may be stronger than expected in this dataset. The large gap between the Basic education group and the other categories also raises questions about whether other demographic factors (such as income differences or customer segmentation within the marketing campaign) may be influencing these purchasing patterns.
 </p>
             <h3>Questions for Further Investigation</h3>
-            <p>Several questions emerged while analyzing the outliers and unexpected patterns in the data. My first major question is why the income difference between the Master’s and the Graduation education groups is so small. I recommend conducting an additional investigation, such as examining the industry breakdown of the sample population, which could help reveal whether certain industries in the dataset have smaller income differences between bachelor’s and master’s level employees. Another question I pondered was the breakdown of the income values across commission-based roles, salary-based roles, or a combination of both, since compensation structure can have a significant impact on overall income.</p>
-            <p>Another area for further investigation involves the nontraditional marital status categories labeled “YOLO” and “Absurd”. I would want to understand the definition of these groups before making any conclusions based on the dataset. Outside of these categories, I would also want clarification on the difference between “Single” and “Alone,” since I do not have enough data to assume the categories represent the same population. Having a definition for each group is critical for making conclusions from the data. </p>
-            <h3>Tool Evaluation</h3>
-            <p>Tableau Public is a very efficient and user-friendly tool when it comes to creating data visualizations. The feature I liked the most was how quickly I could build visuals using drag-and-drop. I did not have to apply many functions or spend time searching through menus, and instead was able to visually understand how to navigate the platform. One of the most useful features was being able to switch between functions such as SUM and AVG without needing to rewrite code. I found Tableau much easier to learn than Excel, as everything is visually organized and accessible on the screen.</p>
-            <p>However, one challenge I encountered was the requirement for visualizations to be published publicly. While this was not a limitation for this assignment, I am not sure I would want every project I create to be publicly accessible. This limitation applies even further to those with jobs that work with sensitive data. This is different from Excel, where files can remain private unless shared.
+
+<p>
+The visualization raises several questions that could be explored further with additional analysis. First, why do customers with a Basic education level show such dramatically lower wine purchases compared to the other education categories? This large gap suggests that other demographic or behavioral variables in the dataset may influence purchasing patterns.
 </p>
+
+<p>
+Another question is why wine purchases increase consistently across each successive education level. Is this pattern driven primarily by income differences between education groups, or could other factors such as lifestyle, age, or household size also contribute to these purchasing patterns?
+</p>
+
+<p>
+It would also be useful to explore whether the marketing campaign targeted certain demographic groups more heavily than others. If specific customer segments were exposed to more promotions or product recommendations, this could influence the purchasing behavior observed in the dataset.
+</p>
+
+<p>
+Finally, additional analysis could examine whether similar patterns appear across other product categories in the dataset, such as meat products, fruits, or sweets. Comparing purchasing behavior across multiple product types could provide a broader understanding of how customer demographics relate to overall spending patterns.
+</p>
+           <h3>Tool Evaluation</h3>
+
+<p>
+Tableau Public is a powerful tool for exploratory data analysis and data visualization. One of its strongest features is the ability to quickly transform raw datasets into interactive visualizations. Tableau automatically identifies dimensions and measures when a dataset is uploaded, which makes it easier to experiment with different chart types and explore relationships between variables. The drag-and-drop interface also makes it relatively intuitive to build visualizations without needing advanced coding or statistical software.
+</p>
+
+<p>
+Another major advantage of Tableau is the ability to create interactive dashboards. Users can hover over data points, filter categories, and explore different segments of the data directly within the visualization. This interactivity allows viewers to engage with the data more deeply than they could with static charts created in tools like Excel or PowerPoint.
+</p>
+
+<p>
+However, Tableau Public also has several limitations. One limitation is that all visualizations published through Tableau Public must be publicly available online, which may not be appropriate when working with sensitive or proprietary data. Additionally, while Tableau makes it easy to create visualizations, it can sometimes limit more advanced statistical analysis compared to tools like Python, R, or specialized analytics software.
+</p>
+
+<p>
+Overall, Tableau Public is a very effective tool for exploratory data visualization and communicating patterns within datasets, but it is often most useful when combined with other analytical tools that allow for deeper statistical analysis.
+</p>
+ </section>
+
+        <section>
+            <h2>What This Lab Demonstrates About My Abilities</h2>
+
+<p>
+This lab demonstrates my ability to perform exploratory data analysis and translate raw datasets into meaningful visualizations. Using Tableau Public, I was able to upload and examine a real-world dataset, identify relevant variables, and design a visualization that highlights patterns in customer purchasing behavior. The process required selecting appropriate dimensions and measures, evaluating trends in the data, and interpreting the results within the context of the dataset.
+</p>
+
+<p>
+The assignment also reflects my ability to critically analyze data visualizations rather than simply presenting them. By comparing expected patterns with the actual results and identifying surprising trends, I was able to approach the visualization as part of an analytical process rather than just a visual output.
+</p>
+
+</section>
+</section>
+
+        <section>
+
+<h2>Key Takeaways</h2>
+
+<p>
+One key takeaway from this lab is how important context and explanation are when presenting data visualizations. A chart alone does not fully communicate meaning without understanding the dataset, the variables being analyzed, and the reasoning behind the visualization design. This assignment reinforced the importance of clearly explaining data sources, analytical choices, and observed patterns so that viewers can accurately interpret the results.
+</p>
+
+<p>
+The lab also highlighted how exploratory visualization tools like Tableau can quickly reveal patterns that may not be obvious when looking at raw data alone. Visualizing the dataset made it easier to identify trends in wine purchasing behavior across education levels and to raise new questions for further analysis.
+</p>
+
+</section>
         </main>
 
     <footer>
