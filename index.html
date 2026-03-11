@@ -1,102 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
+
+<!-- Head section: contains metadata about the page, page title, and the link to the external CSS file -->
 <head>
     <meta charset="UTF-8">
+
+    <!-- Ensures the website scales properly on mobile devices -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Description used by search engines to describe the page -->
     <meta name="description" content="Skills Portfolio showcasing work from DCDA 40833">
-    <meta name="author" content="your name">
+
+    <!-- Author information for the page -->
+    <meta name="author" content="Kaitlin Beltran">
+
+    <!-- Title that appears in the browser tab -->
     <title>Kaitlin Beltran | DCDA 40833 Skills Portfolio</title>
+
+    <!-- Link to the external CSS stylesheet that controls the site's visual design -->
     <link rel="stylesheet" href="css/styles.css">
 </head>
+
 <body>
-    <!-- Navigation: Links to all portfolio pages -->
-    <!-- I updated the colors of my site because I love coral and I wanted my site to match my design interests! I love when each person has a unique page. -->
+
+    <!-- Navigation menu: allows visitors to move between the homepage and each lab page -->
+    <!-- I customized the color scheme of my site (coral tones) to reflect my design interests and make my page visually distinct -->
     <nav>
         <ul>
             <li><a href="index.html">Home</a></li>
-            <li><a href="lab02.html">Lab 2: AI Evaluation</a>
-            <li><a href="lab03.html">Lab 3: Visualization Critique</a>
+            <li><a href="lab02.html">Lab 2: AI Evaluation</a></li>
+            <li><a href="lab03.html">Lab 3: Visualization Critique</a></li>
             <li><a href="lab04.html">Lab 4: Tableau Viz</a></li>
             <li><a href="lab05.html">Lab 5: Vibe Coding</a></li>
             <li><a href="lab06.html">Lab 6: Hometown Map</a></li>
-            
         </ul>
     </nav>
 
-    <!-- Header: Your name and course info -->
-    <!-- I updated this section to contain the accurate name so it reflects my unique work. -->
+    <!-- Header section: displays my name, course information, and the dark mode toggle button -->
+    <!-- This section identifies the portfolio owner and provides an accessibility-friendly theme toggle -->
     <header>
         <h1>Kaitlin Beltran</h1>
         <p>DCDA 40833 Skills Portfolio | Spring 2026</p>
+
+        <!-- Dark mode toggle button: allows users to switch between light and dark site themes -->
+        <!-- aria attributes improve accessibility for screen readers -->
         <button id="dark-mode-toggle" type="button" aria-pressed="false" aria-label="Toggle dark mode">
             Dark Mode: Off
         </button>
     </header>
 
     <main>
-        <!-- Welcome Section: Brief introduction to your portfolio -->
+
+        <!-- Welcome Section: introduces visitors to the purpose of the portfolio -->
+        <!-- This section explains that the site documents my learning across multiple labs -->
         <section id="welcome">
             <h2>Welcome</h2>
-            <!-- TODO: Write a brief introduction (2-3 sentences) about your portfolio -->
-            <!-- I wrote this introduction because I want visitors to know the purpose of the site, the class it is relevant to, and how the layout works. I also want them to know what to expect as of content. -->
+
+            <!-- Introduction explaining the portfolio's purpose and structure -->
             <p>Welcome to my DCDA 40833 Skills Portfolio. This site documents my development across Labs 2–6 in digital culture, data analytics, project design, and web communication. Each lab page includes a summary of the assignment, reflection on what I learned, and examples of the technical and analytical skills I developed throughout the semester.</p>
         </section>
 
-        <!-- About Section: Tell visitors about yourself -->
-        <!-- I wrote the About Me so that visitors know who I am both in and outside of the course. I want them to have context as to what I am excited about when it comes to DCDA so that they can see it reflected in my work. -->
+        <!-- About Section: provides background about who I am and my interests -->
+        <!-- This helps visitors understand my academic interests and career goals -->
         <section id="about">
             <h2>About Me</h2>
-            <!-- TODO: Replace this placeholder content with information about yourself -->
-            <p><strong>Who I am:</strong> My name is Kaitlin Beltran. I am an Honors senior at Texas Christian University with a major in Marketing, minor in Digital Culture & Data Analytics, and a certificate in Consultative Selling. One fun fact about me is that when growing up, I always thought I wanted to be a mathematician. 
-</p>
-            <p><strong>My interests:</strong> Outside of school, I love HIIT workouts, walking, trying new coffee shops, traveling, playing pickleball, and spending time with friends and family. After graduation, I will be going into tech-sales. </p>
-            <p><strong>What I hope to learn:</strong> In the classroom, statistics and data analysis interest me because understanding data gives you the ability to predict the world around you. From this course, I hope to explore data and learn skills on how to do so. </p>
 
-            <!-- Optional: Add a photo of yourself -->
-            
+            <!-- Personal background and academic focus -->
+            <p><strong>Who I am:</strong> My name is Kaitlin Beltran. I am an Honors senior at Texas Christian University with a major in Marketing, minor in Digital Culture & Data Analytics, and a certificate in Consultative Selling. One fun fact about me is that when growing up, I always thought I wanted to be a mathematician.</p>
+
+            <!-- Personal interests outside the classroom -->
+            <p><strong>My interests:</strong> Outside of school, I love HIIT workouts, walking, trying new coffee shops, traveling, playing pickleball, and spending time with friends and family. After graduation, I will be going into tech-sales.</p>
+
+            <!-- Academic curiosity and goals for the course -->
+            <p><strong>What I hope to learn:</strong> In the classroom, statistics and data analysis interest me because understanding data gives you the ability to predict the world around you. From this course, I hope to explore data and learn skills on how to do so.</p>
+
+            <!-- Headshot image to personalize the portfolio -->
             <figure class="viz-container headshot">
                 <img src="images/headshot (3).jpg" alt="Photo of Kaitlin Beltran">
             </figure>
-            
         </section>
 
-        <!-- Portfolio Section: Links to all lab pages -->
+        <!-- Portfolio Section: displays clickable cards linking to each lab assignment -->
+        <!-- This grid layout allows visitors to easily navigate to each project -->
         <section id="portfolio">
             <h2>My Work</h2>
+
             <p>Click on any card below to view that lab assignment. Focus of actual labs may change over the course of the semester:</p>
 
-            <!-- Portfolio Grid: Cards linking to each lab page -->
+            <!-- Portfolio grid container: holds each lab card -->
             <div class="portfolio-grid">
 
-                <!-- Lab 2: AI Tool Evaluation -->
+                <!-- Lab 2 card -->
                 <a href="lab02.html" class="portfolio-card">
                     <h3>AI Tool Evaluation</h3>
                     <span class="lab-tag">Lab 2</span>
                     <p>Analysis of AI tools and their capabilities, exploring how artificial intelligence is changing digital culture.</p>
                 </a>
 
-                <!-- Lab 3: Tufte Critique -->
+                <!-- Lab 3 card -->
                 <a href="lab03.html" class="portfolio-card">
                     <h3>Visualization Critique</h3>
                     <span class="lab-tag">Lab 3</span>
                     <p>Critical analysis of a data visualization using Edward Tufte's principles of graphical excellence.</p>
                 </a>
 
-                <!-- Lab 4: Tableau Visualization -->
+                <!-- Lab 4 card -->
                 <a href="lab04.html" class="portfolio-card">
                     <h3>Tableau Visualization</h3>
                     <span class="lab-tag">Lab 4</span>
                     <p>Interactive data visualization created with Tableau Public, exploring patterns in real-world data.</p>
                 </a>
 
-                <!-- Lab 5: TBD -->
+                <!-- Lab 5 card -->
                 <a href="lab05.html" class="portfolio-card">
                     <h3>Lab 5</h3>
                     <span class="lab-tag">Lab 5</span>
                     <p>Experiments with AI-assisted coding by adding a dark mode feature to the portfolio and documenting the development process.</p>
                 </a>
 
-                <!-- Lab 6: Hometown Map -->
+                <!-- Lab 6 card -->
                 <a href="lab06.html" class="portfolio-card">
                     <h3>Hometown Map</h3>
                     <span class="lab-tag">Lab 6</span>
@@ -106,59 +128,154 @@
             </div>
         </section>
 
-        <!-- Reflection Section: Optional semester reflection -->
+        <!-- Reflection Section: summarizes what I learned throughout the semester -->
+        <!-- This section explains challenges, growth, and what I am excited to continue learning -->
         <section id="reflection">
-            <h2>Semester Reflection</h2>
-            <!-- TODO: After completing all labs, write a reflection on your growth -->
-            <p><strong>What I learned:</strong> I learned a lot from Lab 1, as it introduced me to new concepts, including GitHub, HTML, and CSS, which I had been relatively unfamiliar with. Getting to explore new coding tools was exciting. 
+           <section>
+           <h2>Semester Reflection</h2>
+          
+           <h3>Overview</h3>
+           <p>Over the course of this semester, I have developed a much stronger understanding of how digital tools, data, and design intersect in digital culture and data analytics. At the beginning of the semester, I had limited experience building websites or working with visualization tools beyond Excel, Google Sheets, and minimal Tableau. Through the labs in this course, I learned how to critically evaluate AI tools, analyze and critique visualizations, explore datasets using Tableau, and experiment with AI-assisted coding. My skillset has expanded tremendously.
 </p>
-            <p><strong>Challenges I overcame:</strong> I found the beginning setup process most challenging. I had trouble creating my repository, cloning, and connecting GitHub with Visual Studio Code. However, I reread the directions and got some guidance, which put me back on the right track so that I could continue Lab 1 effectively. 
+
+
+<p>
+The portfolio I created for this course reflects my development across several different technical and analytical skills. While each lab grew more detailed and difficult at times, they challenged me to exercise skills I hadn’t had before and truly understand each step of the coding process.
+
 
 </p>
-            <p><strong>How I grew:</strong> An area I struggle with is patience, which can definitely be frustrating when it comes to coding. When I got stuck in the setup process, Lab 1 actually challenged me to practice patience and take a step back, which I know will be crucial as I continue developing my portfolio. </p>
-            <p><strong>Looking ahead:</strong> As the semester progresses, I am most excited about data visualization, as I have explored that concept in previous courses. However, I am also looking forward to what I don’t know. There are so many tools and tricks I can do with coding that I have not yet learned. Ironically, I am just as intrigued as my viewers are to see what I am able to create in my portfolio!</p>
+
+
+           <h3>Proficiencies</h3>
+<h4>Digital Culture</h4>
+<p>
+Throughout the semester, I developed a stronger understanding of how digital tools influence the way information is created, interpreted, and shared. In Lab 2, I evaluated multiple AI tools (ChatGPT and Canva Magic) using a structured framework that considered capabilities, appropriate use, ethical concerns, and transparency. This exercise helped me think critically about the role of AI in academic and professional environments, rather than simply using it as a productivity tool. In fact, I was actually shocked to find some inaccuracies and limitations of the tools (such as Canva Magic producing a presentation with false data), reminding me that not all digital tools are to be immediately trusted.
+</p>
+
+
+<p>
+In Lab 5, I explored AI-assisted coding by adding a dark mode feature to my portfolio website. This lab helped me understand both the benefits and risks of “vibe coding,” where AI generates code based on natural language prompts. By documenting my level of understanding, I learned how important it is to maintain transparency and comprehension when working with AI-generated outputs, as it can be risky to rely too heavily on AI tools and therefore lack understanding. 
+
+
+</p>
+<h4>Data Analytics</h4>
+<p>
+This course also strengthened my ability to analyze and interpret data through visualization. In Lab 3, I critiqued a data visualization using Edward Tufte’s framework, focusing on information resolution and identifying potential issues such as overreaching or cherry-picking. This exercise helped me recognize how visual design choices can influence how audiences interpret data.
+</p>
+
+
+<p>
+In Lab 4, I used Tableau Public to explore a dataset and identify patterns in customer purchasing behavior. By selecting appropriate dimensions and measures, I was able to analyze trends and identify both expected patterns and surprising outliers. This process helped me understand how visualization tools can reveal patterns that are not immediately visible when looking at raw data alone. An important takeaway from this lab was that my first time around attempting it, I got feedback that I lacked a description of the dataset, its context, and where it came from. This was a huge lesson learned for me, as the dataset description is crucial to reading and understanding any data. I went back and corrected my work and recognized how important this lesson truly was. 
+</p>
+<h4>Project Design and Planning</h4>
+<p>
+Another important skill I developed this semester was the ability to plan and execute digital projects that combine both design and technical components. In Lab 6, I created an interactive hometown map using a custom Mapbox basemap along with Python tools such as Folium and Pandas (tools of which I was originally pretty unfamiliar). This project required understanding how all of these different concepts tied together.
+</p>
+
+
+<p>
+I also had to troubleshoot technical challenges such as file paths, zoom levels, and layer styling to ensure the final map functioned correctly. This process reinforced the importance of planning and problem-solving when working on digital projects. Because it contained both visual and technical components, this was my favorite lab by far. 
+
+
+</p>
+<h4>Collaboration</h4>
+<p>
+Although all of the assignments were completed individually, collaboration still played an important role in the learning process. Throughout the semester, class discussions and peer feedback helped me refine my ideas and gave me new insights into approaching problems I ran into. 
+</p>
+
+
+<p>
+In particular, I compared my Lab 4 visualization with a peer. After analyzing her work, I realized that there were even more components I could add to my visual (such as color coding or a key). I learned so much from discussing the labs and seeing how others approached instructions and problems. 
+
+
+</p>
+
+
+
+
+
+
+          <h3>Self Evaluation</h3>
+
+
+<p>
+Over the course of the semester, I developed stronger technical and analytical skills through building my Skills Portfolio and completing each lab. Early in the course, I was unfamiliar with tools like GitHub, HTML, and CSS, but through the process of creating and revising my portfolio, I became more comfortable structuring web pages, embedding visualizations, and documenting my work clearly with comments. To be completely honest, the first day of class felt like it was being taught in a completely different language, whereas now I find myself not only reading, but also developing and understanding code. The labs also allowed me to connect course concepts to real-world contexts, such as in Lab 2, when I was able to evaluate AI tools through the lens of a sales representative at RealPage (the role I am entering after graduation), and in Lab 3, where I critically analyzed how data visualizations can shape the interpretation of information.
+
+
+</p>
+
+
+<p>
+There were also areas where my work could have been stronger. In particular, the feedback I received on Lab 4 pointed out that my original visualization lacked sufficient explanation about the dataset and its source, which made the analysis difficult to evaluate. That feedback helped me recognize how important context and transparency are when presenting data, and I actually went back and updated the Lab to contain much more context and explanation of the dataset itself. Additionally, Lab 6 was submitted late because I became overwhelmed while trying to understand how the different technical and visual components fit together. Although I ultimately completed the work, this experience showed me that I could have managed my time better or asked for help sooner.
+</p>
+           <h3>Grade</h3>
+
+
+<p>
+Based on my overall work this semester, I believe I have earned an A- in this course. My portfolio demonstrates consistent effort, improvement, and engagement with course concepts across multiple assignments. I approached many labs by applying them to real-world contexts and revising my work carefully to create a stronger final portfolio. The completed portfolio reflects my growth, and the key for me was approaching each assignment with genuine curiosity.
+
+
+</p>
+
+
+<p>
+However, I also know that my work was definitely not perfect. As addressed earlier, my first Lab 4 submission lacked sufficient explanation of the dataset and design choices, and Lab 6 was submitted late because I struggled to integrate the components of the assignment. I did, however, go back, update my work, and ingrain every lesson from those assignments so that I don’t make the same mistakes again. Even with these challenges, I believe my overall work demonstrates strong learning, thoughtful reflection, and meaningful improvement throughout the semester, which is why I believe an A- accurately reflects my performance.
+
+
+</p>
+
         </section>
+
     </main>
 
-    <!-- Footer: Links and copyright -->
-    <!-- I updated this section to contain the accurate link and information so that users have the correct resource. -->
+    <!-- Footer: contains repository link and copyright information -->
+    <!-- This provides visitors with access to the source code for the portfolio -->
     <footer>
         <p><a href="https://github.com/kaitlinbeltran/DCDA40833-portfolio_v2">View Repository on GitHub</a></p>
         <p>&copy; 2026 Kaitlin Beltran | DCDA 40833 | TCU</p>
     </footer>
+
+    <!-- JavaScript controlling the dark mode toggle functionality -->
     <script>
-        // I understand the logic: this selects the dark mode toggle button so we can respond to clicks
-       //I understand the logic: I learned that if the button and styles have a selector mismatch, the button becomes null and the click handler will not work.
+
+        // Selects the dark mode toggle button so we can add a click event
         const darkModeToggle = document.getElementById('dark-mode-toggle');
-        // I understand the logic: this retreives the user's saved theme preference from local storage
+
+        // Retrieves the user's saved theme preference from localStorage
         const savedTheme = localStorage.getItem('theme');
 
-        // I understand the logic: if the saved theme is dark, apply it on page
+        // If the user previously selected dark mode, apply it when the page loads
         if (savedTheme === 'dark') {
             document.documentElement.setAttribute('data-theme', 'dark');
             darkModeToggle.textContent = 'Dark Mode: On';
             darkModeToggle.setAttribute('aria-pressed', 'true');
         }
-        // I understand the logic: this runs whenever the toggle button is clicked
+
+        // Event listener: runs whenever the dark mode button is clicked
         darkModeToggle.addEventListener('click', function () {
-            //I understand the logic: checks if dark mode is currently active
+
+            // Checks whether dark mode is currently active
             const isDarkMode = document.documentElement.getAttribute('data-theme') === 'dark';
-            // I understand the logic: turns dark mode off
+
+            // If dark mode is currently active, turn it off
             if (isDarkMode) {
                 document.documentElement.removeAttribute('data-theme');
                 darkModeToggle.textContent = 'Dark Mode: Off';
                 darkModeToggle.setAttribute('aria-pressed', 'false');
                 localStorage.setItem('theme', 'light');
+
             } else {
-            // I understand the logic: turns dark mode on
+
+                // If dark mode is off, enable it
                 document.documentElement.setAttribute('data-theme', 'dark');
                 darkModeToggle.textContent = 'Dark Mode: On';
                 darkModeToggle.setAttribute('aria-pressed', 'true');
                 localStorage.setItem('theme', 'dark');
 
-         
             }
         });
+
     </script>
+
 </body>
 </html>
